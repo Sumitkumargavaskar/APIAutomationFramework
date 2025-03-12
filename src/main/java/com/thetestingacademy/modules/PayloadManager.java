@@ -1,18 +1,21 @@
 package com.thetestingacademy.modules;
 
+import com.github.javafaker.Faker;
 import com.google.gson.Gson;
-import com.thetestingacademy.pojos.Booking;
-import com.thetestingacademy.pojos.BookingDates;
-import com.thetestingacademy.pojos.BookingResponse;
+import com.thetestingacademy.pojos.*;
+import org.apache.http.auth.AUTH;
 
 public class PayloadManager {
     Gson gson;
 
     public String createPayloadBookingAsString() {
         Booking booking = new Booking();
+        Faker faker = new Faker();
         booking.setFirstname("Pramod");
-        booking.setLastname("Dutta");
-        booking.setTotalprice(112);
+        //booking.setLastname("Dutta");
+booking.setLastname(faker.name().lastName());
+booking.setTotalprice(faker.random().nextInt(1000));
+// booking.setTotalprice(112);
         booking.setDepositpaid(true);
 
         BookingDates bookingdates = new BookingDates();
@@ -24,6 +27,14 @@ public class PayloadManager {
         String jsonPayload = gson.toJson(booking);
         return jsonPayload;
     }
+
+    public String createInvalidPayloadBookingAsString() {
+        return "{}";
+
+
+}
+
+
     public String fullUpdatePayloadAsString() {
         Booking booking = new Booking();
         booking.setFirstname("James");
@@ -44,4 +55,29 @@ public class PayloadManager {
         return bookingRespons;
 
     }
+    public String setAuthpayload(){
+        Auth auth  = new Auth();
+        auth.setUsername("admin");
+        auth.setPassword("password123");
+        gson = new Gson();
+        String jsonPayloadString = gson.toJson(auth);
+        System.out.println("Payload set to "+ jsonPayloadString);
+        return jsonPayloadString;
+
+    }
+    public String getTokenFromJSON(String tokenResponse) {
+        gson = new Gson();
+        //Response (JSON) ->Object TokenResponse
+        //Deserialization
+        TokenResponse tokenResponse1 = gson.fromJson(tokenResponse, TokenResponse.class);
+        return tokenResponse1.getToken();
+    }
+    public Booking getResponseFromJSON(String getResponse) {
+        gson = new Gson();
+        //Response (JSON) ->Object TokenResponse
+        //Deserialization
+        Booking booking = gson.fromJson(getResponse,Booking.class);
+        return booking;
+
+}
 }

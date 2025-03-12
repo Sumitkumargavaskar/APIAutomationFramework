@@ -3,13 +3,15 @@ package com.thetestingacademy.base;
 import com.thetestingacademy.actions.AssertActions;
 import com.thetestingacademy.endpoints.APIConstants;
 import com.thetestingacademy.modules.PayloadManager;
+import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.BeforeTest;
-
+//common to All to TestCase
 public class BaseTest {
     //  Base Test Father -> Testcase - Son - Single Inheritance
     public RequestSpecification requestSpecification;
@@ -18,7 +20,6 @@ public class BaseTest {
     public JsonPath jsonPath;
     public Response response;
     public ValidatableResponse validatableResponse;
-
 
 
     @BeforeTest
@@ -38,5 +39,25 @@ public class BaseTest {
 //                .log().all();
         //  }
     }
-        public String getToken() {return null;}
+
+    public String getToken() {
+        requestSpecification =
+                RestAssured.given().baseUri(APIConstants.BASE_URL)
+                        .basePath(APIConstants.AUTH_URL);
+
+        // Setting the up the Payload
+        String payload = payloadManager.setAuthpayload();
+
+        // Getting the Response
+           response =     requestSpecification
+                        .contentType(ContentType.JSON)
+                        .body(payload)
+                        .when().post();
+        // Extracting of the Token via Deserialization.
+           String token = payloadManager.getTokenFromJSON(response.asString());
+
+        // Verify
+           return token;
+
+    }
 }

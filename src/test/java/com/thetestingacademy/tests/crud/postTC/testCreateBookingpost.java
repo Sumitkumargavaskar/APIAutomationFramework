@@ -1,4 +1,4 @@
-package com.thetestingacademy.tests.crud;
+package com.thetestingacademy.tests.crud.postTC;
 
 import com.thetestingacademy.base.BaseTest;
 import com.thetestingacademy.endpoints.APIConstants;
@@ -25,6 +25,7 @@ public class testCreateBookingpost extends BaseTest {
         validatableResponse = response.then().log().all();
         //Validatable Assertion
         validatableResponse.statusCode(200);
+        //   validatableResponse.body("booking.firstname", Matchers.equalTo("Pramod"));
         //DeSer
         BookingResponse bookingResponse = payloadManager.bookingResponseJava(response.asString());
         //  Assert J
@@ -32,9 +33,25 @@ public class testCreateBookingpost extends BaseTest {
         assertThat(bookingResponse.getBooking().getFirstname()).isNotNull().isNotBlank();
         assertThat(bookingResponse.getBooking().getFirstname()).isEqualTo("Pramod");
         //TestNg Assertions
-        assertActions.verifyStatusCode(response);
+        assertActions.verifyStatusCode(response, 200);
 
 
     }
-}
 
+    @Test(groups = "smoke")
+    @Owner("Promode")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("TC#1 - Verify that the Booking can be Created")
+    public void testCreateBookingNegative() {
+        requestSpecification.basePath(APIConstants.CREATE_UPDATE_BOOKING_URL);
+        response = RestAssured
+                .given(requestSpecification)
+                .when().body(payloadManager.createInvalidPayloadBookingAsString()).post();
+        validatableResponse = response.then().log().all();
+        //Validatable Assertion
+        validatableResponse.statusCode(500);
+
+
+    }
+
+}
