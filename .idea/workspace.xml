@@ -4,19 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0b520ed-f9fc-494e-9345-0763da4f6d1f" name="Changes" comment="Framework">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/thetestingacademy/tests/Integration/sample/TCIntegrationFlow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/thetestingacademy/tests/crud/sample/testCreateBooking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/thetestingacademy/utils/PropertyReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/resource/data.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testng-integration.xml" afterDir="false" />
+    <list default="true" id="e0b520ed-f9fc-494e-9345-0763da4f6d1f" name="Changes" comment="Rest Assured Framework">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/thetestingacademy/listeners/RetryAnalyzer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/thetestingacademy/listeners/RetryListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/thetestingacademy/listeners/extentManager/ExtentManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/thetestingacademy/listeners/extentManager/TestNGListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/thetestingacademy/tests/ddt/VWOLoginPOJO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/thetestingacademy/tests/ddt/vwoLoginAPITC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/thetestingacademy/tests/extendDemo/ExtentManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/thetestingacademy/tests/extendDemo/TCIntegrationFlowExtent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/thetestingacademy/tests/extendDemo/TestNGListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/thetestingacademy/tests/extendDemo/testng-extent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/thetestingacademy/tests/misc/parrallel/MainClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/thetestingacademy/tests/misc/parrallel/MainClass2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/thetestingacademy/tests/misc/parrallel/testng-parrallel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/thetestingacademy/utils/UtilsExcel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/resource/TD (1).xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testng-ddt.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testng-retry.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thetestingacademy/modules/PayloadManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thetestingacademy/modules/PayloadManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/thetestingacademy/actions/AssertActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/thetestingacademy/actions/AssertActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/thetestingacademy/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/thetestingacademy/base/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/thetestingacademy/tests/Integration/TCIntegration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/thetestingacademy/tests/Integration/TCIntegration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/thetestingacademy/tests/crud/testCreateBooking.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/thetestingacademy/tests/crud/testCreateBookingpost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/thetestingacademy/tests/crud/postTC/testCreateBookingpost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/thetestingacademy/tests/Integration/TCIntegration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/thetestingacademy/tests/Integration/retrylogic/TCIntegrationFlowRetry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/thetestingacademy/utils/PropertyReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/thetestingacademy/utils/PropertyReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,31 +53,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;TestNG.E:/TestingAcademy/APIAutomationFramework/testng-integration.xml.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.E:/TestingAcademy/APIAutomationFramework/testng.xml.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/TestingAcademy/APIAutomationFramework&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "TestNG.E:/TestingAcademy/APIAutomationFramework/src/test/java/com/thetestingacademy/tests/extendDemo/testng-extent.xml.executor": "Run",
+    "TestNG.E:/TestingAcademy/APIAutomationFramework/src/test/java/com/thetestingacademy/tests/misc/parrallel/testng-parrallel.xml.executor": "Run",
+    "TestNG.E:/TestingAcademy/APIAutomationFramework/testng-ddt.xml.executor": "Run",
+    "TestNG.E:/TestingAcademy/APIAutomationFramework/testng-integration.xml.executor": "Run",
+    "TestNG.E:/TestingAcademy/APIAutomationFramework/testng-retry.xml.executor": "Run",
+    "TestNG.E:/TestingAcademy/APIAutomationFramework/testng.xml.executor": "Run",
+    "TestNG.vwoLoginAPITC.executor": "Run",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/TestingAcademy/APIAutomationFramework",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\TestingAcademy\APIAutomationFramework" />
+      <recent name="E:\TestingAcademy\APIAutomationFramework\src\test\java\com\thetestingacademy\tests\extendDemo" />
+      <recent name="E:\TestingAcademy\APIAutomationFramework\src\test\java\com\thetestingacademy\tests\misc\parrallel" />
       <recent name="E:\TestingAcademy\APIAutomationFramework\src\main\java\com\thetestingacademy\pojos" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\TestingAcademy\APIAutomationFramework\src\test\java\resource" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.thetestingacademy.tests.extendDemo" />
+      <recent name="com.thetestingacademy.tests.misc.parrallel" />
       <recent name="com.thetestingacademy.tests.Integration" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.E:/TestingAcademy/APIAutomationFramework/testng-integration.xml">
-    <configuration name="E:/TestingAcademy/APIAutomationFramework/testng-integration.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.E:/TestingAcademy/APIAutomationFramework/testng-retry.xml">
+    <configuration name="E:/TestingAcademy/APIAutomationFramework/src/test/java/com/thetestingacademy/tests/extendDemo/testng-extent.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="APIAutomationFramework" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng-integration.xml" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/java/com/thetestingacademy/tests/extendDemo/testng-extent.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
@@ -76,10 +100,47 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="E:/TestingAcademy/APIAutomationFramework/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="E:/TestingAcademy/APIAutomationFramework/src/test/java/com/thetestingacademy/tests/misc/parrallel/testng-parrallel.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="APIAutomationFramework" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/java/com/thetestingacademy/tests/misc/parrallel/testng-parrallel.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="E:/TestingAcademy/APIAutomationFramework/testng-ddt.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="APIAutomationFramework" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng-ddt.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="E:/TestingAcademy/APIAutomationFramework/testng-retry.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="APIAutomationFramework" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng-retry.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="vwoLoginAPITC" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="APIAutomationFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.thetestingacademy.tests.ddt.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.thetestingacademy.tests.ddt" />
+      <option name="MAIN_CLASS_NAME" value="com.thetestingacademy.tests.ddt.vwoLoginAPITC" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -88,8 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.E:/TestingAcademy/APIAutomationFramework/testng-integration.xml" />
-        <item itemvalue="TestNG.E:/TestingAcademy/APIAutomationFramework/testng.xml" />
+        <item itemvalue="TestNG.E:/TestingAcademy/APIAutomationFramework/testng-retry.xml" />
+        <item itemvalue="TestNG.E:/TestingAcademy/APIAutomationFramework/src/test/java/com/thetestingacademy/tests/extendDemo/testng-extent.xml" />
+        <item itemvalue="TestNG.E:/TestingAcademy/APIAutomationFramework/src/test/java/com/thetestingacademy/tests/misc/parrallel/testng-parrallel.xml" />
+        <item itemvalue="TestNG.E:/TestingAcademy/APIAutomationFramework/testng-ddt.xml" />
+        <item itemvalue="TestNG.vwoLoginAPITC" />
       </list>
     </recent_temporary>
   </component>
@@ -118,13 +182,22 @@
       <option name="project" value="LOCAL" />
       <updated>1740460725393</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Rest Assured Framework">
+      <option name="closed" value="true" />
+      <created>1741803648924</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1741803648925</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Custom Hybrid API Automation Framework which can automate the TC (Rest API)." />
     <MESSAGE value="Framework" />
-    <option name="LAST_COMMIT_MESSAGE" value="Framework" />
+    <MESSAGE value="Rest Assured Framework" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rest Assured Framework" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -16,6 +16,9 @@ public class PropertyReader {
         return properties.getProperty(key);
     }
 
+    public static String readKey(String s) {
+        return null;
+    }
 }
 
 
